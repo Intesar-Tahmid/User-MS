@@ -20,14 +20,3 @@ public class UserMsApplication {
     }
 
 }
-/*
-@SpringBootApplication
-public class UserMsApplication {
-
-    public static void main(String[] args) {
-        SpringApplication.run(UserMsApplication.class, args);
-    }
-
-}
-ei balta amr code
-*/

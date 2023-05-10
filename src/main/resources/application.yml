@@ -1,0 +1,24 @@
+server:
+  port: ${PORT:7097}
+
+spring:
+  application:
+    name: user-ms
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8030/eureka
+
+  instance:
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+
+resilience4j:
+  ratelimiter:
+    instances:
+      userRateLimiter:
+        limit-refresh-period: 4s
+        limit-for-period: 2
+        timeout-duration: 0s
+
+
